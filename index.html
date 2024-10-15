@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Shubham</title>
+    <title>Happy Birthday</title>
     <style>
         body {
             background-color: #f7f7f7;
@@ -73,10 +73,24 @@
             }
         }
     </style>
+    <script>
+        function getNameFromParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            return name ? name : 'Friend'; 
+        }
+
+        function displayMessage() {
+            const name = getNameFromParams();
+            document.getElementById('birthday-heading').innerText = `Happy Birthday, ${name}!`;
+        }
+
+        window.onload = displayMessage;
+    </script>
 </head>
 <body>
 
-    <h1>Happy Birthday, Shubham!</h1>
+    <h1 id="birthday-heading">Happy Birthday, Shubham!</h1>
     <p class="birthday-message">Wishing you a day filled with joy and happiness!</p>
 
     <div class="balloons">
@@ -87,4 +101,3 @@
 
 </body>
 </html>
-
