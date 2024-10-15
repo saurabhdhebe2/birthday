@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shubham</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+        .birthday-message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #555;
+        }
+        .balloons {
+            margin-top: 40px;
+        }
+        .balloon {
+            width: 100px;
+            height: 150px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+        .balloon:before {
+            content: '';
+            width: 2px;
+            height: 50px;
+            background-color: #333;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .balloon:nth-child(2) {
+            background-color: #ffd740;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #40c4ff;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Birthday, Shubham!</h1>
+    <p class="birthday-message">Wishing you a day filled with joy and happiness!</p>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+</body>
+</html>
+
